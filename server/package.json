@@ -1,0 +1,21 @@
+{
+  "name": "jate",
+  "version": "1.0.0",
+  "main": "server.cjs",
+  "scripts": {
+    "server": "nodemon server.cjs --ignore client",
+    "start": "node server.cjs"
+  },
+  "type": "module",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "idb": "^7.1.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  },
+  "description": ""
+}
