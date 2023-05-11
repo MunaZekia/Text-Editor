@@ -31,15 +31,15 @@ module.exports = () => {
       new WebpackPwaManifest({
         fingerprints: false,
         inject: true,
-        name: 'Progressive',// 'JUST ANOTHER TEXT EDITOR'
-        short_name: 'Progressive',//  'JATE'
+        name: 'JUST ANOTHER TEXT EDITOR',// 'JUST ANOTHER TEXT EDITOR'
+        short_name: 'JATE',//  'JATE'
         description: 'A simple text editor that saves your work.',
         background_color: '#01579b', //need to change color
         theme_color: '#ffffff',//need to change color
         start_url: '/',// not sure if i need .
         icons: [
           {
-            src: path.resolve('src/images/icons/icon-512x512.png'),
+            src: path.resolve('src/images/logo.png'),
             sizes: [96, 128, 192, 256, 384, 512],
             // this is the size of the icon
             destination: path.join('assets', 'icons'),
@@ -49,9 +49,9 @@ module.exports = () => {
       }),
 
     ],
-    experiments: { // we need this to enable top level await in webpack
-      topLevelAwait: true,// not sure if this is needed
-    },
+    // experiments: { // we need this to enable top level await in webpack
+    //   topLevelAwait: true,// not sure if this is needed
+    // },
 
     module: {
       rules: [
@@ -69,8 +69,7 @@ module.exports = () => {
             loader: 'babel-loader',
             options: {
               presets: ['@babel/preset-env'],
-              plugins: ['@babel/plugin-proposal-class-properties',
-              '@babel/plugin-transform-runtime'],
+              plugins: ['@babel/plugin-proposal-object-rest-spread', '@babel/transform-runtime'],
               // this is needed to enable top level await in webpack
               // ??????
             }

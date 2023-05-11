@@ -3,7 +3,7 @@ import { openDB } from "../../node_modules/idb/build/esm/index.js";
 
 // we are using the openDB method from the idb library to open a database called jate
 // export//
- const initdb = async () =>
+  export const initdb = async () =>
   openDB("jate", 1, {
     upgrade(db) {
       if (db.objectStoreNames.contains("jate")) {
@@ -45,10 +45,10 @@ export const getDb = async () => {
   const transaction = jateDb.transaction(["jate"], "readwrite");
   // we are opening up the desired object store
   const objstore = transaction.objectStore("jate");
-  const request = objstore.get("content");
+  const request = objstore.getAll();
   const result = await request;
-  console.log('resu', result);
-  return result
+  console.log('result.content', result);
+  return result?.content;
   //but what result are we returning?
 
 };
