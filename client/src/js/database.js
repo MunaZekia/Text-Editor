@@ -2,8 +2,7 @@ import { openDB } from "../../node_modules/idb/build/esm/index.js";
 //idb is a library that allows us to use indexedDB
 
 // we are using the openDB method from the idb library to open a database called jate
-// export//
-  export const initdb = async () =>
+ const initdb = async () =>
   openDB("jate", 1, {
     upgrade(db) {
       if (db.objectStoreNames.contains("jate")) {

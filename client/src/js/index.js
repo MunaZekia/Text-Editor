@@ -1,7 +1,7 @@
- // import { Workbox } from "../../nodemodules/workbox-window/Workbox.mjs";
+// import { Workbox } from "../../nodemodules/workbox-window/Workbox.mjs";
 import Editor from "./editor.js";
 import "./database.js";
-//  import "../css/style.css";
+import "../css/style.css";
 
 const main = document.querySelector("#main");
 main.innerHTML = "";
